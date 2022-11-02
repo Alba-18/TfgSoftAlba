@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>TFG Alba</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/templatemo-style.css}">
+</head>
+<body>
+    <!--BARRA NAVEGACIÓN-->
+    <header th:fragment="header">
+        <nav class="navbar navbar-expand-lg" style="background-color: #4472C4">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <strong>FILTRADO DE NOTICIAS</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link active" aria-current="page" th:href="@{/index}">Noticias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link">Sobre TFG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link" href="#">Inicio de Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--CONTENIDO-->
+    <div class="container"></div>
+    <!--PIE DE PÁGINA-->
+    <footer th:fragment="footer" style="background-color: #4472C4" class="fixed-bottom">
+        <div class="container-fluid tm-container-small" >
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">SOBRE EL FILTRADO DE NOTICIAS</h3>
+                    <p>Filtrado de noticias, es el sitio web realizado por Alba Sevillano Portilla como investigación realizada para el trabajo de fin de grado. Es un trabajo de investigación sobre el algortimo usado por plataformas de recomendación de noticias, películas, música, etc.</p>
+                </div>
+            </div>
+        </div>
+        <script th:src="@{/js/plugins.js}"></script>
+    </footer>
+</body>
+</html>
