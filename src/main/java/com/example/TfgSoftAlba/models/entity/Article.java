@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.Arrays;
 
 @Entity
-@Table(name= "news")
-public class news {
+@Table(name= "Article")
+public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,10 +17,10 @@ public class news {
     private String sBody;
 
     @Lob
-    @Column(name="Image", nullable = false)
+    @Column(name="Image", nullable = true)
     private byte[] Image;
 
-    public news(String sTitle, String kjhdjhdghjwdekehdkjwejwhdwekdwejkwhwhdj) {
+    public Article(String sTitle, String sBody) {
         this.sTitle = sTitle;
         this.sBody = sBody;
     }
@@ -59,7 +59,7 @@ public class news {
 
     @Override
     public String toString() {
-        return "news{" +
+        return "Article{" +
                 "id=" + id +
                 ", sTitle='" + sTitle + '\'' +
                 ", sBody='" + sBody + '\'' +

@@ -1,20 +1,20 @@
 package com.example.TfgSoftAlba.models.service;
 
-import com.example.TfgSoftAlba.models.entity.news;
-import com.example.TfgSoftAlba.models.repository.NewRepository;
+import com.example.TfgSoftAlba.models.entity.Article;
+import com.example.TfgSoftAlba.models.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class NewServiceImpl implements NewService{
+public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
-    private NewRepository repository;
+    private ArticleRepository repository;
 
     @Override
-    public List<news> listAllNews() {
+    public List<Article> listAllNews() {
         return repository.findAll();
     }
 }
