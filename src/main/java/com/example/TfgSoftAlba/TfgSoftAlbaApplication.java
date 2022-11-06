@@ -1,5 +1,6 @@
 package com.example.TfgSoftAlba;
 
+import com.example.TfgSoftAlba.models.entity.Article;
 import com.example.TfgSoftAlba.models.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -20,12 +21,12 @@ public class TfgSoftAlbaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		/**Article new1;
-		new1 = new Article("Noticia de ultima hora 1","cuerponoticia1");
-		newrepository.save(new1);
+		/**Article article1;
+		article1 = new Article("Noticia de ultima hora 1","cuerponoticia1");
+		articleRepository.save(article1);
 
-		Article new2;
-		new2 = new Article("Noticia de ultima hora","cuerponoticia2");
-		newrepository.save(new2);**/
+		Article article2;
+		article2 = new Article("Noticia de ultima hora","cuerponoticia2");
+		articleRepository.save(article2);**/
 	}
 }

@@ -20,9 +20,12 @@ public class Article {
     @Column(name="Image", nullable = true)
     private byte[] Image;
 
-    public Article(String sTitle, String sBody) {
+    public Article(){}
+
+    public Article(String sTitle, String sBody, byte[] image) {
         this.sTitle = sTitle;
         this.sBody = sBody;
+        this.Image= image;
     }
 
     public Long getId() {

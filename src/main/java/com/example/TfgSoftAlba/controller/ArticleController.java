@@ -14,7 +14,7 @@ public class ArticleController {
 
     @GetMapping ({"/","/index"})
     public String index(Model model){
-        model.addAttribute("Article", articleService.listAllNews());
-        return"home";
+        model.addAttribute("Article", articleService.listAllArticles());
+        return"article";
     }
 }

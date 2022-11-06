@@ -14,7 +14,7 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleRepository repository;
 
     @Override
-    public List<Article> listAllNews() {
+    public List<Article> listAllArticles() {
         return repository.findAll();
     }
 }

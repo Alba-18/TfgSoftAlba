@@ -6,5 +6,5 @@ import com.example.TfgSoftAlba.models.entity.Article;
 
 public interface ArticleService {
 
-    public List<Article> listAllNews();
+    public List<Article> listAllArticles();
 }

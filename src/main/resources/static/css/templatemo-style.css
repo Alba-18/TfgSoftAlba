@@ -1,9 +1,5 @@
 /*
-    
-TemplateMo 556 Catalog-Z
-
 https://templatemo.com/tm-556-catalog-z
-
 */
 
 p { line-height: 1.8;
@@ -49,7 +45,6 @@ input{font-family: fantasy}
     cursor: not-allowed;
 }
 /*------------------------------------------*/
-
 
 /*------------------------------------------*/
 /*ESTILO DE NAVBAR*/
@@ -99,10 +94,10 @@ input{font-family: fantasy}
 
 /*------------------------------------------*/
 /*ESTILO DE MÁRGENES*/
-.tm-mt-20 { margin-top: 20px; }
+.tm-mt-20 { margin-top: 40px; }
 .tm-mb-40 { margin-bottom: 40px; }
-.tm-mr-20 { margin-right: 20px; }
-.tm-ml-20 { margin-left: 20px; }
+.tm-mr-20 { margin-right: 40px; }
+.tm-ml-20 { margin-left: 40px; }
 /*------------------------------------------*/
 
 
@@ -120,12 +115,13 @@ input{font-family: fantasy}
 .tm-bg-gray { 
     background-color: #4472C4;
 }
-    
-.tm-footer-links li {
-    list-style: none;
-    margin-bottom: 5px;
-    margin-top:20 px;
+
+.tm-footer {
+    font-size: 0.95rem;
+    position: absolute;
+    bottom: 0;
 }
+.tm-footer-title { font-size: 1.4rem; }
 /*------------------------------------------*/
 
 
@@ -219,31 +215,7 @@ input{font-family: fantasy}
 }
 /*------------------------------------------*/
 
-.tm-paging-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    font-size: 1.1rem;
-    color: #999;
-    background-color: #EEEEEE;
-    margin: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.tm-paging-link:hover,
-.tm-paging-link.active {
-    background-color: #009999;
-    color: #fff; 
-}
-
-/*---------------*/
-/***** Ming *****/
-/*---------------*/
-
+/*---IMAGENES DE LAS NOTICIAS------------*/
 figure.effect-ming {
 	background: #030c17;
 }
@@ -290,7 +262,7 @@ figure.effect-ming:hover figcaption { background-color: rgba(58,52,42,0); }
 figure.effect-ming:hover img { opacity: 0.4; }
 
 
-
+/**
 .tm-social-links li {
     list-style: none;
     margin-right: 15px;
@@ -312,37 +284,7 @@ figure.effect-ming:hover img { opacity: 0.4; }
     color: #fff;
     background-color: #009999;
 }
-
-.tm-footer { font-size: 0.95rem; }
-.tm-footer-title { font-size: 1.4rem; }
-
-/* Videos */
-#tm-video-container {
-    max-height: 400px;
-    overflow: hidden;
-    background-color: #333;
-    margin-bottom: 90px;
-    position: relative;
-}
-
-#tm-video {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-#tm-video-control-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    color: #e1e1e1;
-}
-
-.tm-video-details {
-    height: 100%;
-    padding: 40px;
-}
+**/
 
 /* About */
 .tm-row-1640 { max-width: 1640px; }
@@ -361,71 +303,6 @@ figure.effect-ming:hover img { opacity: 0.4; }
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.tm-about-img-text { max-width: 940px; }
-
-/* Contact */
-select.form-control { border-radius: 0; }
-select.form-control option { height: 30px; }
-
-select:not([multiple]) {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-position: right 15px center;
-    background-repeat: no-repeat;
-    background-image: url(../img/select-arrow.png);
-    padding: 14px 20px;
-    padding-right: 20px;
-    color: #666;
-}
-
-.mapouter{
-    position:relative;
-    height:480px;
-    width:100%;
-    max-width: 480px;
-}
-
-.gmap-canvas {
-    overflow:hidden;
-    background:none!important;
-    height:480px;
-    width:100%;
-}
-
-.tm-contact-form { max-width: 420px; }
-.tm-address-col { max-width: 520px; }
-.tm-contacts { padding-left: 0; }
-
-.tm-contacts li {
-    list-style: none;
-    margin-bottom: 20px;
-}
-
-.tm-contacts li a i { width: 30px; }
-.tm-social { display: flex; }
-
-.tm-social li {
-    list-style: none;
-    margin-bottom: 20px;
-    margin-right: 15px;
-}
-
-.tm-social li a i {
-    width: 40px;
-    height: 40px;
-    color: #666666;
-    background-color: #EEEEEE;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.tm-social li a:hover i {
-    color: #fff;
-    background-color: #009999;
 }
 
 .form-control,
