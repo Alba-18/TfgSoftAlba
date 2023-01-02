@@ -1,31 +1,65 @@
 package com.example.TfgSoftAlba.models.entity;
 
 import javax.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 @Entity
-@Table(name= "Users")
+@Table(name= "Users", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="sEmail", nullable = false, length = 50)
-    private String sEmail;
+    @Column(name="email", nullable = false, length = 50)
+    private String email;
 
-    @Column(name="sName", nullable = false, length = 500)
-    private String sName;
+    @Column(name="name", nullable = false, length = 500)
+    private String name;
 
-    @Column(name="sPassword", nullable = true)
-    private String sPassword;
+    @Column(name="password", nullable = true)
+    private String password;
+
+
+    @ManyToMany(cascade = {
+        CascadeType.PERSIST,
+        CascadeType.MERGE
+    })
+    @JoinTable(name = "user_article",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "article_id")
+    )
+    private List<Article> articles = new ArrayList<>();
+
+    public void addArticle(Article article) {
+        articles.add(article);
+        article.getUsers().add(this);
+    }
+
+    public void removeArticle(Article article) {
+        articles.remove(article);
+        article.getUsers().remove(this);
+    }
+
 
     public User(){}
 
-    public User(String sEmail, String sName, String sPassword) {
-        this.sEmail = sEmail;
-        this.sName = sName;
-        this.sPassword = sPassword;
+    public User(Long id, String email, String name, String password) {
+        super();
+        this.id = id;
+        this.email = email;
+        this.name = name;
+        this.password = password;
+    }
+
+    public User(String email, String name, String password) {
+        super();
+        this.email = email;
+        this.name = name;
+        this.password = password;
     }
 
     public Long getId() {
@@ -36,37 +70,45 @@ public class User {
         this.id = id;
     }
 
-    public String getsEmail() {
-        return sEmail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setsEmail(String sEmail) {
-        this.sEmail = sEmail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getsName() {
-        return sName;
+    public String getName() {
+        return name;
     }
 
-    public void setsName(String sName) {
-        this.sName = sName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getsPassword() {
-        return sPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setsPassword(String sPassword) {
-        this.sPassword = sPassword;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", sEmail='" + sEmail + '\'' +
-                ", sName='" + sName + '\'' +
-                ", sPassword='" + sPassword + '\'' +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

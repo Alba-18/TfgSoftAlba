@@ -2,29 +2,28 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="plantilla/template :: head">
 </head>
-<body>
-    <header th:replace="plantilla/template :: header"></header>
+    <body>
+        <header th:replace="plantilla/template :: header"></header> 
 
-    <!--APERTURA MUESTRA NOTICIAS-->
-    <div class="container">
-        <div class="row d-flex" >
-            <!--INICIO LISTADO NOTICIAS-->
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" th:each="article : ${Article}">
-                <div class="tm-noticia-item">
-                    <img src="src/main/resources/static/images/Cat03.jpg">
-                    <div class="text d-block">
-                    <h1 th:text="${article.sTitle}" href="#"></h1>
+        <!--APERTURA MUESTRA NOTICIA-->
+        <div class="container" >
+            <div class="row d-flex my-5" >
+                <!--INICIO NOTICIA-->
+                <div class="col-md-8 offset-md-2 mb-5 " style="border-bottom: 1px solid #000!important;">
+                    <div class="tm-noticia-item" style="border-top: 4px solid #000!important">
+                                                                    
+                        <h3 th:text="${Article.sTitle}" style="border-bottom: 4px solid #000!important" class="text-uppercase p-3"></h3>
+
+                        <img th:src="'/images/' + ${Article.image} + '.jpg'" class="img-fuid">
+
+                        <p th:text="${Article.sBody}" class="py-4" style="text-align: justify;"></p>
+                        
                     </div>
                 </div>
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span class="tm-text-gray-light">14 Oct 2020</span>
-                </div>
+                <!--FIN NOTICIA-->
             </div>
-            <!--FIN LISTADO NOTICIAS-->
         </div>
-    </div>
-
-
-    <footer th:replace="plantilla/template :: footer"></footer>
-</body>
+        
+        <footer th:replace="plantilla/template :: footer"></footer>
+    </body>
 </html>

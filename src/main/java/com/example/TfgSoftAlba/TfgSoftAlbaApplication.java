@@ -9,24 +9,24 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class TfgSoftAlbaApplication implements CommandLineRunner {
+public class TfgSoftAlbaApplication {// implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TfgSoftAlbaApplication.class, args);
 	}
 
-	@Autowired
-	public ArticleRepository articleRepository;
+	// @Autowired
+	// public ArticleRepository articleRepository;
 
 
-	@Override
-	public void run(String... args) throws Exception {
-		/**Article article1;
-		article1 = new Article("Noticia de ultima hora 1","cuerponoticia1");
-		articleRepository.save(article1);
+	// @Override
+	// public void run(String... args) throws Exception {
+	// 	/**Article article1;
+	// 	article1 = new Article("Noticia de ultima hora 1","cuerponoticia1");
+	// 	articleRepository.save(article1);
 
-		Article article2;
-		article2 = new Article("Noticia de ultima hora","cuerponoticia2");
-		articleRepository.save(article2);**/
-	}
+	// 	Article article2;
+	// 	article2 = new Article("Noticia de ultima hora","cuerponoticia2");
+	// 	articleRepository.save(article2);**/
+	// }
 }

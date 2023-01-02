@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+    <body>
+        <header th:replace="plantilla/template :: header"></header> 
+
+        <!--APERTURA MUESTRA NOTICIAS-->
+        <div class="container" >
+            <div class="row d-flex my-5" >
+                <!--INICIO LISTADO NOTICIAS-->
+                
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-5 " th:each="article : ${Article}" style="border-bottom: 1px solid #000!important;">
+                        
+                        <div class="tm-noticia-item" style="border-top: 5px solid #000!important">
+                        
+                            <a th:href="'article/'+ ${article.id}"><img th:src="'images/' + ${article.image} + '.jpg'" class="img-fuid" ></a>
+                            <div class="text d-block">
+                                <a th:href="'article/'+ ${article.id}" style="text-decoration: none; color: #343434;"><h4 th:text="${article.sTitle}" ></h4></a>
+                            <!-- <a th:href="'article/'+ ${article.id}"></a> -->
+                            <!-- <p th:text="${article.sBody}"></p> -->
+                            </div>
+                        </div>
+                        
+                        </a>
+                        <!-- <div class="d-flex justify-content-between tm-text-gray">
+                            <span class="tm-text-gray-light">14 Oct 2020</span>
+                        </div> -->
+                    </div>
+                
+                <!--FIN LISTADO NOTICIAS-->
+            </div>
+        </div>
+        
+        <footer th:replace="plantilla/template :: footer"></footer>
+    </body>
+</html>

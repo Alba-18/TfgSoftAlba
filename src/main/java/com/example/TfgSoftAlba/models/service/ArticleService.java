@@ -7,4 +7,6 @@ import com.example.TfgSoftAlba.models.entity.Article;
 public interface ArticleService {
 
     public List<Article> listAllArticles();
+
+    public Article get(Long id);
 }

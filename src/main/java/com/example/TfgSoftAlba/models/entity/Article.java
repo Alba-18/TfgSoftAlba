@@ -1,7 +1,10 @@
 package com.example.TfgSoftAlba.models.entity;
 
 import javax.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 @Entity
 @Table(name= "Article")
@@ -10,19 +13,23 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="sTitle", nullable = false, length = 50)
+    @Column(name="sTitle", nullable = false, length = 250)
     private String sTitle;
 
-    @Column(name="sBody", nullable = false, length = 500)
+    @Column(name="sBody", nullable = false, length = 2500)
     private String sBody;
 
     @Lob
     @Column(name="Image", nullable = true)
-    private byte[] Image;
+    private String Image;
 
+    @ManyToMany(mappedBy = "articles")
+    public List<User> users = new ArrayList<>();
+
+    
     public Article(){}
 
-    public Article(String sTitle, String sBody, byte[] image) {
+    public Article(String sTitle, String sBody, String image) {
         this.sTitle = sTitle;
         this.sBody = sBody;
         this.Image= image;
@@ -40,7 +47,7 @@ public class Article {
         return sBody;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return Image;
     }
 
@@ -56,8 +63,16 @@ public class Article {
         this.sBody = sBody;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         Image = image;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
     @Override
@@ -66,7 +81,7 @@ public class Article {
                 "id=" + id +
                 ", sTitle='" + sTitle + '\'' +
                 ", sBody='" + sBody + '\'' +
-                ", Image=" + Arrays.toString(Image) +
+                ", Image=" + Image +
                 '}';
     }
 }

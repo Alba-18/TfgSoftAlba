@@ -1,10 +1,14 @@
 /*
 https://templatemo.com/tm-556-catalog-z
 */
+body{
+    background-color: #DAE3F3;
+}
 
 p { line-height: 1.8;
     color: black;
-    font-family: fantasy;}
+    /* font-family: fantasy; */
+}
 
 a { 
     text-decoration: none;
@@ -50,7 +54,7 @@ input{font-family: fantasy}
 /*ESTILO DE NAVBAR*/
 .navbar-brand {
     color: black;
-    font-size: 50px;
+    font-size: 30px;
     font-family:fantasy;
     margin-left: 40px;
 }
@@ -117,11 +121,18 @@ input{font-family: fantasy}
 }
 
 .tm-footer {
-    font-size: 0.95rem;
-    position: absolute;
+    background-color: #4472C4; 
+    position: fixed;
+    left: 0;
     bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
-.tm-footer-title { font-size: 1.4rem; }
+.tm-footer-title { 
+    color: black;
+    font-size: 30px;
+    font-family:fantasy; }
 /*------------------------------------------*/
 
 
@@ -150,8 +161,8 @@ input{font-family: fantasy}
 .tm-noticia-item img {
     position: relative;
     display: block;
-    min-height: 100%;
-    max-width: 100%;
+    height: auto;
+    width: 100%;
     opacity: 0.8;
 }
 
@@ -198,7 +209,7 @@ input{font-family: fantasy}
 
 .tm-noticia-item p {
     letter-spacing: 1px;
-    font-size: 68.5%;
+    font-size: 80.5%;
 }
 
 .tm-gallery div.d-block { animation: show .5s ease; }
@@ -299,7 +310,7 @@ figure.effect-ming:hover img { opacity: 0.4; }
 .tm-about-icon-container {
     width: 150px;
     height: 150px;
-    border: 1px solid #009999;
+    border: 1px solid #4472C4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,11 +319,11 @@ figure.effect-ming:hover img { opacity: 0.4; }
 .form-control,
 input:-internal-autofill-selected,
 select:not([multiple]) {
-    color: #009999 !important;
+    color: #000 !important;
 }
 
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color:  #009999;
+    color:  #4472C4;
     opacity: 1; /* Firefox */
 }
 
